@@ -7,7 +7,7 @@
   border: 3px solid $headeroutline;
   width: 100%;
   padding: 1rem;
-  margin-top: 2rem;
+  margin-top: $general-padding-gap;
   margin-left: $general-padding-gap;
   margin-right:  $general-padding-gap;
   border-radius: 5px;
@@ -22,7 +22,7 @@
     width: 80px;
     height: 72px;
     border-radius: 4px;
-    background: white;
+    background: $light-clr;
 
     p {
       margin: 0.4rem;

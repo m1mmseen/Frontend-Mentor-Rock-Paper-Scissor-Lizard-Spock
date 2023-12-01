@@ -8,7 +8,7 @@
   margin-top: 10rem;
 
   p {
-    color: #FFF;
+    color: $light-clr;
     text-transform: uppercase;
     text-align: center;
     text-shadow: 0 3px 3px rgba(0, 0, 0, 0.20);
@@ -24,9 +24,9 @@
     display: none;
 
     h2 {
-      color: #FFF;
+      color: $light-clr;
       text-align: center;
-      text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.20);
+      text-shadow: $result-shadow;
       font-size: 56px;
       font-style: normal;
       font-weight: 700;
@@ -39,8 +39,9 @@
       width: 220px;
       height: 48px;
       border-radius: 8px;
-      background: linear-gradient(0deg, #F3F3F3 0%, #FFF 100%);
-      box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.20);color: #3B4262;
+      background: linear-gradient(0deg, #F3F3F3 0%, $light-clr 100%);
+      box-shadow: $result-shadow;
+      color: #3B4262;
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
@@ -50,31 +51,25 @@
     }
   }
   .result.visible {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    @include flex(column, center, center, 1rem);
     text-align: center;
   }
 
   .pick {
     display: inline-flex;
-    height: calc(clamp(9.6875rem, 6.6725rem + 12.8638vw, 18.25rem) + 32px *2);
+    height: calc($general-symbol-proportions + 32px *2);
     flex-direction: column;
     justify-content: space-between;
     gap: 2rem;
     flex-shrink: 0;
     flex-grow: 1;
-    width: clamp(9.6875rem, 6.6725rem + 12.8638vw, 18.25rem);
+    width: $general-symbol-proportions;
   }
 
   .symbol{
-    width: clamp(9.6875rem, 6.6725rem + 12.8638vw, 18.25rem);
-    height: clamp(9.6875rem, 6.6725rem + 12.8638vw, 18.25rem);
-    display: flex;
-    align-self: center;
-    justify-content: center;
+    width: $general-symbol-proportions;
+    height: $general-symbol-proportions;
+    @include flex(column, center, center, 0);
     align-items: center;
   }
   .placeholder {
@@ -95,8 +90,6 @@
 .gamefield-scoring.visible {
   display: flex;
   gap: 2rem;
-/*  flex-wrap: wrap;
-  max-width: 600px;*/
 }
 
 @media screen and (max-width: 768px) {

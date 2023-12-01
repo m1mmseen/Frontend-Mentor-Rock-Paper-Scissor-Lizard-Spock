@@ -79,7 +79,7 @@
   width: 80px;
   height: 72px;
   border-radius: 4px;
-  background: white;
+  background: hsl(0, 0%, 98%);
 }
 .header .score-field p {
   margin: 0.4rem;
@@ -152,7 +152,7 @@
   margin-top: 10rem;
 }
 .gamefield-scoring p {
-  color: #FFF;
+  color: hsl(0, 0%, 98%);
   text-transform: uppercase;
   text-align: center;
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -167,9 +167,9 @@
   display: none;
 }
 .gamefield-scoring .result h2 {
-  color: #FFF;
+  color: hsl(0, 0%, 98%);
   text-align: center;
-  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   font-size: 56px;
   font-style: normal;
   font-weight: 700;
@@ -181,8 +181,8 @@
   width: 220px;
   height: 48px;
   border-radius: 8px;
-  background: linear-gradient(0deg, #F3F3F3 0%, #FFF 100%);
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(0deg, #F3F3F3 0%, hsl(0, 0%, 98%) 100%);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   color: #3B4262;
   font-size: 16px;
   font-style: normal;
@@ -194,8 +194,8 @@
 .gamefield-scoring .result.visible {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   text-align: center;
 }
@@ -213,8 +213,10 @@
   width: clamp(9.6875rem, 6.6725rem + 12.8638vw, 18.25rem);
   height: clamp(9.6875rem, 6.6725rem + 12.8638vw, 18.25rem);
   display: flex;
-  align-self: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 0;
   align-items: center;
 }
 .gamefield-scoring .placeholder {
@@ -232,8 +234,6 @@
 .gamefield-scoring.visible {
   display: flex;
   gap: 2rem;
-  /*  flex-wrap: wrap;
-    max-width: 600px;*/
 }
 
 @media screen and (max-width: 768px) {
@@ -251,9 +251,9 @@
   width: 128px;
   height: 40px;
   background: transparent;
-  border: 1px solid white;
+  border: 1px solid hsl(0, 0%, 98%);
   text-transform: uppercase;
-  color: white;
+  color: hsl(0, 0%, 98%);
   border-radius: 8px;
   transition: 1s;
   background: linear-gradient(to left, transparent 50%, hsla(0, 0%, 98%, 0.5) 50%) right;

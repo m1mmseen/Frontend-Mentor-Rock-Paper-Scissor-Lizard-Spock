@@ -5,9 +5,9 @@
     width: 128px;
     height: 40px;
     background: transparent;
-    border: 1px solid white;
+    border: 1px solid $light-clr;
     text-transform: uppercase;
-    color: white;
+    color: $light-clr;
     border-radius: 8px;
     transition: 1s;
     background: linear-gradient(to left, transparent 50%, hsla(0, 0% ,98% ,50%) 50%) right;
