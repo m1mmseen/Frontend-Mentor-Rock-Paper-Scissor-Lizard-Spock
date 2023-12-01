@@ -7,8 +7,7 @@
 .symbols:hover {
   transform: scale(110%);
   cursor: pointer;
-  outline: .7rem solid rgba(151, 151, 151, 0.15);
-  outline-offset: -0.4375rem;
+  @include shineEffect();
   box-shadow: 0 0 0 1rem hsla(0, 0%, 100%, 3%);
 }
 
@@ -19,8 +18,7 @@
   border-radius: 50%;
   transform: scale(110%);
   cursor: pointer;
-  outline: 1rem solid rgba(151, 151, 151, 0.15);
-  outline-offset: -0.4375rem;
+  @include shineEffect();
   box-shadow: 0 0 0 1.5rem hsla(0, 0%, 100%, 3%),
   0 0 0 3rem hsla(0, 0%, 100%, 3%);
   -webkit-animation: rotate 2s ease-in-out 0.5s 1 forwards;

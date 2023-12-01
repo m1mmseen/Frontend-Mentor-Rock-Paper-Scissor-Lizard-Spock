@@ -5,3 +5,9 @@
   align-items: $align;
   gap: $gap;
 }
+
+@mixin shineEffect() {
+  outline: .7rem solid rgba(151, 151, 151, 0.15);
+  outline-offset: -0.4375rem;
+
+}
