@@ -1,0 +1,52 @@
+@use 'utils' as *;
+
+
+.header {
+  box-sizing: border-box;
+  @include flex(row, space-between, center, 2rem);
+  border: 3px solid $headeroutline;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-left: $general-padding-gap;
+  margin-right:  $general-padding-gap;
+  border-radius: 5px;
+  max-width: 700px;
+
+  img {
+    width: 49px;
+    height: 49px;
+  }
+
+  .score-field {
+    width: 80px;
+    height: 72px;
+    border-radius: 4px;
+    background: white;
+
+    p {
+      margin: 0.4rem;
+    }
+
+    .score-text {
+      color: $score-text;
+      text-align: center;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 1.563px;
+      text-transform: uppercase;
+    }
+
+    .score {
+      color: $dark-text;
+      text-align: center;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 40px; /* 100% */
+    }
+  }
+}
+

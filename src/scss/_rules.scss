@@ -1,0 +1,67 @@
+@use 'utils' as *;
+
+.rules {
+  button {
+    width: 128px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid white;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 8px;
+    transition: 1s;
+    background: linear-gradient(to left, transparent 50%, hsla(0, 0% ,98% ,50%) 50%) right;
+    background-size: 200% 100%;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-position: left;
+  }
+}
+
+.rule-board {
+  opacity: 0;
+  @include flex(column, space-evenly);
+  position: absolute;
+  background: white;
+  padding-inline: calc($general-padding-gap *2);
+  height: 0;
+  overflow: hidden;
+  transition: opacity 1s, box-shadow 2s;
+  border-radius: 4px;
+
+  img:first-of-type {
+    width: 311px;
+  }
+
+  img:last-of-type:hover {
+    cursor: pointer;
+  }
+
+  h2 {
+    color: $dark-text;
+    text-transform: uppercase;
+  }
+
+}
+
+.rule-board.visible {
+  height: 100svh;
+  opacity: 1;
+  transition: opacity 1s, box-shadow 1.5s;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    align-self: center;
+  }
+
+  .rule-board.visible{
+    height: 60%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-bottom: 20px;
+    box-shadow: 0 0 0 100vw hsla(0, 0%,98%, 30%);
+  }
+}

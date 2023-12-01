@@ -1,0 +1,43 @@
+@use 'utils' as *;
+
+.gamefield-start {
+  display: none;
+  width: clamp(14.1875rem, 11.9428rem + 9.5775vw, 20.5625rem);
+  height: clamp(14.1875rem, 12.2949rem + 8.0751vw, 19.5625rem);
+  background-image: url("../../assets/images/bg-pentagon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  align-self: center;
+  position: relative;
+
+  img {
+    position: absolute;
+    border-radius: 50%;
+    transition: .3s;
+  }
+
+  #Scissors {
+    top: -15%;
+    left: 27%;
+  }
+  #Paper {
+    top: 48px;
+    right: -48px;
+  }
+  #Stone {
+    right: 0;
+    bottom: -48px;
+  }
+  #Lizard {
+    left: 0;
+    bottom: -48px;
+  }
+  #Spock {
+    top: 48px;
+    left: -48px;
+  }
+}
+.gamefield-start.visible{
+  display: block;
+}

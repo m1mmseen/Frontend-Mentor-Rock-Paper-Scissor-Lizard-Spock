@@ -1,0 +1,21 @@
+@use 'index' as *;
+
+body {
+    box-sizing: border-box;
+    height: 100svh;
+    background-image: $background;
+    margin: 0;
+    padding: 0;
+    font-family: barlow, sans-serif;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr;
+    place-items: flex-start center;
+    height: 100svh;
+    padding-inline: calc($general-padding-gap / 2);
+    overflow: hidden;
+    margin-inline: auto;
+}

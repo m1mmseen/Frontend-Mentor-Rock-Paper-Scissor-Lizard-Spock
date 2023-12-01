@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo_m1.png">
+  <link rel="stylesheet" href="src/scss/styles.css">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <img src="assets/images/logo-bonus.svg" alt="rock-paper-scissors-spock-lizard-logo">
+    <div class="score-field">
+      <p class="score-text">score</p>
+      <p class="score" id="score">0</p>
+    </div>
+  </div>
+  <div class="gamefield-start visible">
+    <img src="assets/images/symbols/scissors.svg" class="symbols" alt="scissors" id="Scissors">
+    <img src="assets/images/symbols/paper.svg" class="symbols" alt="paper" id="Paper">
+    <img src="assets/images/symbols/stone.svg" class="symbols" alt="rock" id="Stone">
+    <img src="assets/images/symbols/lizard.svg" class="symbols" alt="lizard" id="Lizard">
+    <img src="assets/images/symbols/spock.svg" class="symbols" alt="spock" id="Spock">
+  </div>
+  <div class="gamefield-scoring">
+    <div class="pick">
+      <div class="players-symbol symbol"></div>
+      <p>You picked</p>
+    </div>
+    <div class="result">
+      <h2 id="result-text"></h2>
+      <button id="play-again">Play Again</button>
+    </div>
+    <div class="pick">
+      <div class="houses-symbol symbol">
+        <div class="placeholder"></div>
+      </div>
+      <p>The House Picked</p>
+    </div>
+
+  </div>
+
+  <div class="rules">
+    <button class="rulesToggle">rules</button>
+  </div>
+  
+  <div class="rule-board">
+    <h2>Rules</h2>
+    <img src="assets/images/image-rules-bonus.svg" alt="rules of the game">
+    <img src="assets/images/icon-close.svg" alt="close x for rules overlay" id="close">
+  </div>
+
+
+
+</div>
+<script src="src/js/main.js" type="module"></script>
+<script src="src/js/gameFieldSwitcher.js" type="module"></script>
+<script src="src/js/gameService.js" type="module"></script>
+<script src="src/js/rulesToggler.js" type="module"></script>
+</body>
+</html>

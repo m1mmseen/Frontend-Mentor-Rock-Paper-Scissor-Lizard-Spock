@@ -1,0 +1,27 @@
+@use 'utils' as *;
+
+.symbols {
+  width: clamp(5.75rem, 4.5836rem + 4.9765vw, 9.0625rem);
+}
+
+.symbols:hover {
+  transform: scale(110%);
+  cursor: pointer;
+  outline: .7rem solid rgba(151, 151, 151, 0.15);
+  outline-offset: -0.4375rem;
+  box-shadow: 0 0 0 1rem hsla(0, 0%, 100%, 3%);
+}
+
+.players-symbol img, .houses-symbol img {
+  width: clamp(8.125rem, 4.5599rem + 15.2113vw, 18.25rem);;
+}
+.winner {
+  border-radius: 50%;
+  transform: scale(110%);
+  cursor: pointer;
+  outline: 1rem solid rgba(151, 151, 151, 0.15);
+  outline-offset: -0.4375rem;
+  box-shadow: 0 0 0 1.5rem hsla(0, 0%, 100%, 3%),
+  0 0 0 3rem hsla(0, 0%, 100%, 3%);
+}
+

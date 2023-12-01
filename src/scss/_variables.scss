@@ -1,0 +1,31 @@
+/* ----- COLORS -----  */
+
+$dark-text: hsl(229, 25%, 31%);
+$score-text: hsl(229, 64%, 46%);
+$headeroutline: hsl(217, 16%, 45%);
+$background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
+/* ----- LAYOUT VARIABLES ----- */
+
+$general-padding-gap: 2rem;
+
+/* ----- TYPOGRAPHY ----- */
+@font-face {
+  font-family: barlow;
+  src: url("../../assets/fonts/BarlowSemiCondensed-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: barlow;
+  src: url("../../assets/fonts/BarlowSemiCondensed-Bold.ttf");
+  font-weight: 700;
+}
+
+/* ----- COMPONENTS ----- */
+
+$mobile-start-button:96px;
+$desktop-start-button: 145px;
+
+$mobile-scoring-button: 130px;
+$desktop-scoring-button: 292px;
+

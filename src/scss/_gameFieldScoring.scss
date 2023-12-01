@@ -1,0 +1,112 @@
+@use 'utils' as *;
+
+.gamefield-scoring {
+  display: none;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: 10rem;
+
+  p {
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.20);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 213.333% */
+    letter-spacing: 1.875px;
+    margin: 0;
+  }
+
+  .result {
+    display: none;
+
+    h2 {
+      color: #FFF;
+      text-align: center;
+      text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.20);
+      font-size: 56px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin: 0;
+      align-self: center;
+    }
+
+    button {
+      width: 220px;
+      height: 48px;
+      border-radius: 8px;
+      background: linear-gradient(0deg, #F3F3F3 0%, #FFF 100%);
+      box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.20);color: #3B4262;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+  }
+  .result.visible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .pick {
+    display: inline-flex;
+    height: calc(clamp(9.6875rem, 6.6725rem + 12.8638vw, 18.25rem) + 32px *2);
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-shrink: 0;
+    flex-grow: 1;
+    width: clamp(9.6875rem, 6.6725rem + 12.8638vw, 18.25rem);
+  }
+
+  .symbol{
+    width: clamp(9.6875rem, 6.6725rem + 12.8638vw, 18.25rem);
+    height: clamp(9.6875rem, 6.6725rem + 12.8638vw, 18.25rem);
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .placeholder {
+    background: hsla(0, 0%, 0%, 10%);
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+  }
+
+  .placeholder.hidden {
+    width: 0;
+    height: 0;
+    background: none;
+  }
+
+}
+
+.gamefield-scoring.visible {
+  display: flex;
+  gap: 2rem;
+/*  flex-wrap: wrap;
+  max-width: 600px;*/
+}
+
+@media screen and (max-width: 768px) {
+  .result  {
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: -100%;
+    left: 50%;
+  }
+  .gamefield-scoring {
+    margin-top: 20px;
+  }
+}
