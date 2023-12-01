@@ -23,5 +23,27 @@
   outline-offset: -0.4375rem;
   box-shadow: 0 0 0 1.5rem hsla(0, 0%, 100%, 3%),
   0 0 0 3rem hsla(0, 0%, 100%, 3%);
+  -webkit-animation: rotate 2s ease-in-out 0.5s 1 forwards;
+  animation: rotate .6s linear 0s 1 forwards;
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+    transform: rotate3d(0, 0, 1, 180deg);
+
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+    transform: rotate3d(0, 0, 1, 360deg);
+    width: 110%;
+    height: 110%;
+  }
 }
 

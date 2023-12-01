@@ -6,9 +6,11 @@ const housePick = document.querySelector(".houses-symbol");
 const placeholder = document.querySelector(".placeholder");
 let houseSymbole = '';
 let playersSymbole = '';
-let score = 0;
+let score = localStorage.getItem("score") ? localStorage.getItem("score") :"0";
 let scoreText = document.getElementById("score");
 let result = '';
+scoreText.innerText = score;
+
 
 export function startGameService(symbol) {
         switchGameField();
@@ -28,6 +30,7 @@ export function startGameService(symbol) {
                         document.querySelector(".players-symbol img").classList.add("winner");
                         score++;
                         scoreText.innerText = score.toString();
+                        localStorage.setItem("score", score.toString());
                         break;
                     case "You lose":
                         document.querySelector(".houses-symbol img").classList.add("winner");

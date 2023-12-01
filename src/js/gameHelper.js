@@ -59,8 +59,7 @@ export function playAgain(player, house, placeholder) {
     placeholder.classList.toggle("hidden");
     switchGameField();
     document.querySelector(".result").classList.toggle("visible");
-    player.querySelector("img").classList.remove("winner");
-    house.querySelector("img").classList.remove("winner");
+
 }
 
 function delay(timeout) {
